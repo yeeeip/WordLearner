@@ -1,0 +1,99 @@
+.passed-modules-title-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 11vw;
+    margin-bottom: 2vw;
+}
+.passed-modules-button {
+    width: 8vw;
+    height: 1.5vw;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1vw;
+    background-color: #3877EE;
+    padding: 0.5vw 0.9vw;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.passed-modules-title {
+    font-size: 1.7vw;
+    color: #2D3748;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.container-passed-modules-passed{
+    display: grid;
+    grid-template-columns: 27.5vw auto;
+    grid-template-rows: 13vw auto;
+}
+.container-created-modules-passed {
+    width: 24.2vw;
+    height: 10.2vw;
+    background-color: #F6F7FB;
+    padding: 1vw;
+    border-radius: 0.5vw;
+}
+.container-passed-modules a{
+    text-decoration: none;
+}
+.block-passed-module-title {
+    font-size: 1.3vw;
+    color: #3877EE;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.block-passed-module-line {
+    width: 0.1vw;
+    height: 1.2vw;
+    background-color: #2D3748;
+    margin: 0 0.6vw;
+}
+.block-passed-module-date {
+    display: flex;
+    align-items: center;
+    margin: 2vw 0;
+}
+.block-passed-module-info {
+    font-size: 1vw;
+    color: #2D3748;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.block-passed-module-cell {
+    font-size: 1.3vw;
+    color: white;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    background-color: #3877EE;
+    width: 7vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2vw;
+}
+.block-passed-module-img {
+    width: 1.6vw;
+    margin-right: 0.4vw;
+}

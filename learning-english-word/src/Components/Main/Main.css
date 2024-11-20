@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3vw 12vw;
+}
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3vw 12.5vw;
+}
+.title {
+    height: 2.2vw;
+    display: flex;
+    align-items: center;
+}
+.title img{
+    width: 1.85vw;
+    height: 1.85vw;
+}
+.word-one {
+    font-size: 1.3vw;
+    color: #3877EE;
+    margin-left: 0.4vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.word-two {
+    font-size: 1.3vw;
+    color: #EE6C4D;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.reg {
+    color: #3877EE;
+    font-size: 1.1vw;
+    margin-right: 0.5vw;
+    cursor: pointer;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    text-decoration: none;
+    font-style: normal;
+}
+.log {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1vw;
+    background-color: #3877EE;
+    padding: 0.5vw 0.9vw;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.log:hover {
+    background-color: #3877EECC;
+}
+
+.footer-word-one {
+    font-size: 1.3vw;
+    color: #3877EE;
+    margin-left: 0.4vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.footer-word-two {
+    font-size: 1.3vw;
+    color: #EE6C4D;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.footer-img {
+    width: 1.85vw;
+    height: 1.85vw;
+}
+
+
+@media (max-width: 480px) {
+    .footer-word-one {
+        font-size: 14px;
+    }
+    .footer-word-two {
+        font-size: 14px;
+    }
+    .footer-title {
+        margin-bottom: 20px;
+    }
+    .footer-main {
+        display: flex;
+        flex-direction: column;
+        padding: 1.3vw 12.5vw;
+    }
+}

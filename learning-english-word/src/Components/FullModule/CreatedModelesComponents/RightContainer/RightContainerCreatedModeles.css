@@ -1,0 +1,185 @@
+.full-modules-title-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6vw;
+    margin-bottom: 2vw;
+}
+.full-modules-button {
+    width: 8vw;
+    height: 1.5vw;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1vw;
+    background-color: #3877EE;
+    padding: 0.5vw 0.9vw;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.full-modules-title {
+    font-size: 1.7vw;
+    color: #2D3748;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.container-full-modules {
+    display: grid;
+    grid-template-columns: 19.5vw 19.5vw auto;
+    grid-template-rows: 13vw 13vw auto;
+}
+.block-full-module {
+    width: 16.2vw;
+    height: 10.2vw;
+    background-color: #F6F7FB;
+    padding: 1vw;
+    border-radius: 0.6vw;
+}
+.container-full-modules a{
+    text-decoration: none;
+}
+.block-full-module-title {
+    font-size: 1.3vw;
+    color: #3877EE;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.block-full-module-line {
+    width: 0.1vw;
+    height: 1.2vw;
+    background-color: #2D3748;
+    margin: 0 0.6vw;
+}
+.block-full-module-date {
+    display: flex;
+    align-items: center;
+    margin: 2vw 0;
+}
+.block-full-module-info {
+    font-size: 1vw;
+    color: #2D3748;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.block-full-module-cell {
+    font-size: 0.9vw;
+    color: white;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    background-color: #3877EE;
+    width: 7vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2vw;
+    cursor: pointer;
+}
+
+.full-modules-textField {
+    width: 58vw;
+    display: flex;
+    justify-content: flex-end;
+}
+.full-modules-textField .css-cmpglg-MuiFormControl-root-MuiTextField-root{
+    width: 28vw;
+    border: 0.1vw solid #3877EE;
+    border-radius: 0.3vw;
+    
+}
+.full-modules-textField .css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root {
+    font-size: 1vw;
+    color: #2D3748;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    height: 2vw;
+}
+
+
+@media (max-width: 480px) {
+    
+    .full-modules-textField .css-cmpglg-MuiFormControl-root-MuiTextField-root {
+        width: 280px;
+        border-radius: 8px;
+        position: static;
+    }
+    .full-modules-textField .css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root {
+        font-size: 16px;
+        height: 38px;
+        position: static;
+    }
+    .full-modules-textField {
+        width: 280px;
+        position: static;
+        margin-top: 62px;
+    }
+    .css-cmpglg-MuiFormControl-root-MuiTextField-root {
+        position: static;
+    }
+    .full-modules-title {
+        font-size: 16px;
+        line-height: 20px;
+        width: 144px;
+    }
+    .full-modules-title-button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 144px;
+    }
+    .container-full-modules {
+        flex-direction: column;
+        display: flex;
+    }
+    .block-full-module {
+        width: 280px;
+        height: 177px;
+        margin-bottom: 19px;
+        border-radius: 8px;
+        padding-top: 20px;
+    }
+    .block-full-module-title {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .block-full-module-info {
+        font-size: 16px;
+    }
+    .block-full-module-line {
+        width: 2px;
+        height: 20px;
+        background-color: #2D3748;
+        margin: 0 6px;
+    }
+    .block-full-module-date {
+        margin: 30px 18px;
+    }
+    .block-full-module-cell {
+        width: 92px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 8px;
+        margin-left: 20px;
+    }
+}

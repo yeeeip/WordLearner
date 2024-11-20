@@ -1,0 +1,218 @@
+.test {
+    display: flex;
+}
+.cards-info {
+    margin-top: 11vw;
+    margin-bottom: 2vw;
+}
+.test-info-title {
+    font-size: 1.7vw;
+    color: #2D3748;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+    margin-bottom: 2vw;
+}
+.test-info-page {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.container-test-info {
+    margin-top: 2vw;
+}
+.task-test-title {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.5vw;
+    font-style: normal;
+    margin: 2vw 0;
+}
+.container-task-test {
+    display: grid;
+    grid-template-columns: 34.5vw auto;
+    grid-template-rows: 6vw;
+}
+.task-test-option {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.5vw;
+    font-style: normal;
+    background-color: #F6F7FB;
+    width: 31vw;
+    height: 4vw;
+    border-radius: 0.3vw;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    cursor: pointer;
+}
+.next-task3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 69vw;
+}
+.right-light-buttons img {
+    width: 2.4vw;
+    margin-right: 10px;
+}
+.next-task3 span {
+    width: 8vw;
+    height: 3vw;
+    background-color: #3877EE;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    font-size: 1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.5vw;
+    font-style: normal;
+    border-radius: 0.3vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.modal-window-test {
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.modal-window-test-info {
+    width: 23vw;
+    height: 11.5vw;
+    background-color: white;
+    border-radius: 0.3vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw; 
+    box-sizing: border-box;
+}
+.modal-window-test-info h1 {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.modal-window-test-info-text {
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.5vw;
+    font-style: normal;
+    font-size: 0.8vw;
+    margin: 0.8vw 0;
+    display: flex;
+}
+.modal-window-test-info p {
+    font-weight: 700;
+    margin-right: 0.2vw;
+}
+.exit-task {
+    height: 2vw;
+    width: 7vw;
+    background-color: #3877EE;
+    color: white;
+    font-size: 0.8vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.5vw;
+    font-style: normal;
+    border-radius: 0.3vw;
+    cursor: pointer;
+}
+.exit-task-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+}
+
+
+
+
+
+
+.cards-task-info {
+    width: 69vw;
+    height: 27vw;
+    border: 1px solid #3877EE;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cards-task-info img{
+    height: 14vw;
+    width: 23vw;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .cards-info {
+        display: flex;
+        margin-top: 78px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .test-info-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .cards-task-info {
+        width: 280px;
+        height: 240px;
+    }
+    .cards-task-info img{
+        width: 216px;
+        height: 111px;
+    }
+    .next-task3 span {
+        margin-left: 3vw;
+        width: 116px;
+        height: 28px;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    .right-light-buttons img {
+        width: 26px;
+        margin-top: 5px;
+    }
+}

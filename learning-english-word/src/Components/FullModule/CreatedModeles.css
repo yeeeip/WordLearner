@@ -1,0 +1,75 @@
+.created-modules {
+    display: flex;
+}
+.header-left {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 24vw
+}
+.header-left-icon {
+    display: flex;
+    align-items: center;
+    margin: 3vw 2vw 5vw 3vw;
+}
+.burger {
+    width: 1.7vw;
+    height: 1.5vw;
+}
+.header-left-logo {
+    width: 2.6vw;
+    height: 2.6vw;
+    margin-left: 1.5vw;
+}
+
+
+.header-left-container-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw 5vw 3vw;
+}
+.header-left-button {
+    width: 15vw;
+    height: 3.2vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0.5vw;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0.5vw;
+}
+.header-left-button:hover {
+    background-color: #F6F7FB;
+}
+.header-left-buttons-text{
+    padding-left: 0.7vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #2D3748;
+
+}
+.header-left-buttons-text:active{
+    color: #3877EE;
+}
+
+.header-left-button img {
+    width: 1.6vw;
+}
+
+@media (max-width: 480px) {
+    .header-left-logo {
+        width: 36px;
+        height: 36px;
+    }
+    .created-modules {
+        display: flex;
+    }
+    .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input {
+        
+    }
+}

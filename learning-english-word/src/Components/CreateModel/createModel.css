@@ -1,0 +1,444 @@
+.create-module {
+    display: flex;
+}
+.header-left {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 24vw
+}
+.header-left-icon {
+    display: flex;
+    align-items: center;
+    margin: 3vw 2vw 5vw 3vw;
+}
+.burger {
+    width: 1.7vw;
+    height: 1.5vw;
+    margin-right: 1.5vw;
+    display: none;
+}
+.header-left-logo {
+    width: 2.6vw;
+    height: 2.6vw;
+}
+
+
+.header-left-container-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw 5vw 3vw;
+}
+.header-left-button {
+    width: 15vw;
+    height: 3.2vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0.5vw;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0.5vw;
+}
+.header-left-button:hover {
+    background-color: #F6F7FB;
+}
+.header-left-buttons-text{
+    padding-left: 0.7vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #2D3748;
+
+}
+.header-left-buttons-text:active{
+    color: #3877EE;
+}
+
+.header-left-button img {
+    width: 1.6vw;
+}
+
+
+
+
+
+.right-create-model {
+    margin-top: 10.5vw;
+    display: flex;
+    flex-direction: column;
+}
+.right-create-model h1 {
+    font-size: 1.7vw;
+    color: #2D3748;
+    margin-left: 0.4vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.right-create-model-info {
+    padding: 1.4vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F7FB;
+    width: 71vw;
+    height: 10vw;
+    margin: 1.6vw 0;
+    border-radius: 0.6vw;
+}
+.right-create-model-info span {
+    margin-bottom: 0.4vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.input-title {
+    height: 2.5vw;
+    border: 0;
+    border-radius: 0.3vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+    padding-left: 1vw;
+    margin-bottom: 0.6vw;
+    font-size: 1.1vw;
+}
+.input-info {
+    height: 4vw;
+    border: 0;
+    border-radius: 0.3vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+    padding-left: 1vw;
+    margin-bottom: 0.6vw;
+    font-size: 1.1vw;
+}
+
+
+
+
+.container-tasks-words {
+    padding: 1.4vw;
+    display: flex;
+    background-color: #F6F7FB;
+    width: 71vw;
+    height: 10vw;
+    margin-top: 0.4vw;
+    border-radius: 0.6vw;
+    flex-direction: column;
+    margin-bottom: 1.4vw;
+}
+.task {
+    display: flex;
+    flex-direction: column;
+}
+.container-tasks-words-input {
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+.container-tasks-words-input span {
+    margin-bottom: 1vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.container-tasks-words-input input {
+    height: 2.5vw;
+    width: 21vw;
+    border: 0;
+    border-radius: 0.3vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+    padding-left: 1vw;
+    margin-bottom: 1vw;
+    font-size: 1.1vw;
+}
+.btn-delete-task-word {
+    background-color: #FF4F46;
+    width: 6vw;
+    height: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    cursor: pointer;
+}
+.add-tasks-words {
+    width: 10vw;
+    height: 2.5vw;
+    background-color: #3877EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.save-words {
+    width: 7.3vw;
+    height: 2.4vw;
+    cursor: pointer;
+    border: solid #3877EE 0.15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    color: #3877EE;
+    margin-left: 1vw;
+}
+
+
+
+
+.input-file-row {
+	display: inline-block;
+}
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	vertical-align: middle;
+	color: #969BA3;
+	display: flex;
+    align-items: center;
+	box-sizing: border-box;
+    background-color: white;
+    height: 2.5vw;
+    width: 21vw;
+    border: 0;
+    border-radius: 0.3vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+    padding-left: 1vw;
+    margin-bottom: 1vw;
+    font-size: 1.1vw;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.input-file input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover/Active */
+.input-file:hover span {
+	background-color: white;
+}
+.input-file:active span {
+	background-color: white;
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+ 
+/* Список файлов */
+.input-file-list {
+	padding: 1px 0;
+}
+.input-file-list-item {
+    display: flex;
+}
+.input-file-list-remove {
+    color: red;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 19vw;
+    margin-top: 0.4vw;
+    position: absolute;
+}
+
+
+
+.error {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+
+.uploaded-image {
+    height: 3vw;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .burger {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+    .header-left-logo {
+        width: 36px;
+        height: 36px;
+    }
+    .right-create-model {
+        position: static;
+        margin-top: 80px;
+        margin-left: 16vw;
+    }
+    .right-create-model h1 {
+        font-size: 24px;
+        margin-bottom: 3vw;
+    }
+    .right-create-model-info {
+        width: 280px;
+        height: 206px;
+        border-radius: 8px;
+    }
+    .right-create-model-info span {
+        font-size: 16px;
+        margin: 20px 0px;
+    }
+    .right-create-model-info input {
+        width: 248px;
+        height: 38px;
+        font-size: 16px;
+    }
+    .header-left-container-buttons {
+        background-color: white;
+        height: 100%;
+        width: 248px;
+        margin: 0;
+    }
+    .header-left {
+        position: absolute;
+    }
+    .header-left-buttons-text {
+        font-size: 16px;
+    }
+    .header-left-button {
+        width: 200px;
+    }
+    .header-left-buttons-img {
+        width: 24px;
+        height: 24px;
+    }
+    .container-tasks-words {
+        width: 280px;
+        height: 322px;
+    }
+    .container-task-word-block {
+        display: flex;
+        flex-direction: column;
+    }
+    .container-tasks-words-input span {
+        font-size: 16px;
+        margin: 20px 0px;
+    }
+    .container-tasks-words-input input {
+        width: 248px;
+        height: 38px;
+        font-size: 16px;
+    }
+    .input-file span  {
+        width: 248px;
+        height: 38px;
+    }
+    .input-file-list-remove {
+        font-size: 20px;
+        margin-left: 222px;
+        margin-top: 0px;
+    }
+    .btn-delete-task-word {
+        width: 89px;
+        height: 38px;
+        font-size: 16px;
+        margin-top: 11px;
+        border-radius: 4px;
+    }
+    .input-file span {
+        margin: 0;
+    }
+    .input-file-list-item span{
+        margin: 0;
+    }
+    .add-tasks-words {
+        width: 149px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+    .save-words {
+        width: 87px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+}
+@media (max-width: 375px) {
+    .right-create-model {
+        margin-left: 9vw;
+    }
+}
+@media (max-width: 320px) {
+    .right-create-model {
+        margin-left: 1vw;
+    }
+}

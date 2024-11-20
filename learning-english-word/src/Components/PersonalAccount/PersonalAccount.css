@@ -1,0 +1,574 @@
+.personal-account {
+    display: flex;
+}
+.header-left {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 24vw
+}
+.header-left-icon {
+    display: flex;
+    align-items: center;
+    margin: 3vw 2vw 5vw 3vw;
+}
+.burger {
+    width: 1.7vw;
+    height: 1.5vw;
+}
+.header-left-logo {
+    width: 2.6vw;
+    height: 2.6vw;
+    margin-left: 1.5vw;
+}
+
+
+.right-user-info-input {
+    display: flex;
+}
+.header-left-container-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw 5vw 3vw;
+}
+.header-left-button {
+    width: 15vw;
+    height: 3.2vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0.5vw;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0.5vw;
+}
+.header-left-button:hover {
+    background-color: #F6F7FB;
+}
+.header-left-buttons-text{
+    padding-left: 0.7vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #2D3748;
+
+}
+.header-left-buttons-text:active{
+    color: #3877EE;
+}
+.header-left-button img {
+    width: 1.6vw;
+}
+
+
+.right-user-data  {
+    margin-top: 11vw;
+}
+.right-user-data h1{
+    font-size: 1.7vw;
+    color: #2D3748;
+    margin-left: 0.4vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+    margin-bottom: 2vw;
+}
+.title-data{
+    font-size: 1.4vw;
+    color: #2D3748;
+    margin-left: 0.4vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.right-user-info {
+    width: 71vw;
+    height: 11vw;
+    background-color: #F6F7FB;
+    padding: 1.4vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F7FB;
+    margin: 1.6vw 0;
+    border-radius: 0.6vw;
+}
+.right-user-info span{
+    margin-bottom: 0.4vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.right-user-info input{
+    width: 31vw;
+    height: 3vw;
+    border: 0;
+    border-radius: 0.3vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+    padding-left: 1vw;
+    font-size: 1.1vw;
+    margin-right: 4vw;
+    margin-top: 1vw;
+}
+.user-name {
+    display: flex;
+    flex-direction: column;
+}
+.user-email {
+    display: flex;
+    flex-direction: column;
+}
+.save-info-user {
+    background-color: #3877EE;
+    width: 7vw;
+    height: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    cursor: pointer;
+    margin-top: 2vw;
+}
+
+
+
+.right-user-actions {
+    width: 71vw;
+    height: 255px;
+    height: 20.5vw;
+    padding: 1.4vw;
+    display: flex;
+    background-color: #F6F7FB;
+    margin: 1.6vw 0;
+    border-radius: 0.6vw;
+}
+.right-user-actions img {
+    width: 13vw;
+}
+.right-user-actions-info {
+    margin-left: 6vw;
+}
+.right-user-actions-info-title {
+    font-size: 1.7vw;
+    color: #3877EE;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    margin-bottom: 2vw;
+}
+.right-user-actions-info-container {
+    display: grid;
+    grid-template-columns: 19vw 12vw;
+}
+.right-user-actions-info-container span {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+    margin: 1vw 0;
+}
+
+
+
+
+
+
+.hexagon {
+    width: 10vw;
+    height: 6.5vw;
+    background: #3877EE99;
+    position: relative;
+    top: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-weight: 500;
+    line-height: 1.5vw;
+    color: #FFFFFF;
+    padding: 0 1.4vw;
+    margin-right: 0.5vw;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5vw solid transparent; /* 50px -> 5vw */
+    border-right: 5vw solid transparent; /* 50px -> 5vw */
+}
+.hexagon:before {
+    top: -2.47vw;
+    border-bottom: 2.5vw solid #3877EE99;
+}
+
+.hexagon:after {
+    bottom: -2.48vw;
+    border-top: 2.5vw solid #3877EE99;
+}
+
+/* Когда элемент активен, меняем фон */
+.hexagon.active-achievement {
+    background: #3877EE;
+}
+
+.hexagon.active-achievement:before {
+    border-bottom-color: #3877EE;
+}
+
+.hexagon.active-achievement:after {
+    border-top-color: #3877EE;
+}
+.right-user-actions-achievements {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4vw;
+    background-color: #F6F7FB;
+    padding-left: 1vw;
+    margin-top: 2vw;
+    border-radius: 0.6vw;
+    padding-bottom: 2vw;
+}
+.right-user-actions-achievements span {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-style: normal;
+    margin: 1vw 0;
+}
+.right-user-actions-achievements-container {
+    height: 12vw;
+    width: 71.64vw;
+    display: flex;
+}
+.exit {
+    background-color: red;
+    width: 11vw;
+    height: 3.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 0.3vw;
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    cursor: pointer;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.--rdp-day_button-border-radius {
+    border: none
+}
+.rdp-selected {
+    background-color: #3877EE;
+    color: white;
+    border-radius: 0.5vw;
+}
+.rdp-day_button {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.rdp-weekday {
+    font-size: 1.1vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+    color: #3877EE;
+}
+.rdp-chevron {
+    fill: #3877EE;
+}
+.rdp-caption_label {
+    font-size: 1.3vw;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.5vw;
+    font-style: normal;
+}
+.rdp-root {
+    --rdp-accent-color: blue;
+    --rdp-accent-background-color: #f0f0ff;
+    --rdp-day-height: 2.75vw;
+    --rdp-day-width: 2.75vw;
+    --rdp-day_button-border-radius: 100%;
+    /* --rdp-day_button-border: 2px solid transparent; */
+    --rdp-day_button-height: var(--rdp-day-height);
+    --rdp-day_button-width: var(--rdp-day-width);
+    --rdp-selected-border: 0.2vw solid var(--rdp-accent-color);
+    --rdp-disabled-opacity: 0.5;
+    --rdp-outside-opacity: 0.75;
+    --rdp-today-color: var(--rdp-accent-color);
+    --rdp-dropdown-gap: 0.5vw;
+    --rdp-months-gap: 2vw;
+    --rdp-nav_button-disabled-opacity: 0.5;
+    --rdp-nav_button-height: 2.25vw;
+    --rdp-nav_button-width: 2.25vw;
+    --rdp-nav-height: 2.75vw;
+    --rdp-range_middle-background-color: var(--rdp-accent-background-color);
+    --rdp-range_middle-foreground-color: white;
+    --rdp-range_middle-color: inherit;
+    --rdp-range_start-color: white;
+    --rdp-range_start-background: linear-gradient(var(--rdp-gradient-direction), transparent 50%, var(--rdp-range_middle-background-color) 50%);
+    --rdp-range_start-date-background-color: var(--rdp-accent-color);
+    --rdp-range_end-background: linear-gradient(var(--rdp-gradient-direction), var(--rdp-range_middle-background-color) 50%, transparent 50%);
+    --rdp-range_end-color: white;
+    --rdp-range_end-date-background-color: var(--rdp-accent-color);
+    --rdp-week_number-border-radius: 100%;
+    --rdp-week_number-border: 0.2vw solid transparent;
+    --rdp-week_number-height: var(--rdp-day-height);
+    --rdp-week_number-opacity: 0.75;
+    --rdp-week_number-width: var(--rdp-day-width);
+    --rdp-weeknumber-text-align: center;
+    --rdp-weekday-opacity: 0.75;
+    --rdp-weekday-padding: 0.5vw 0vw;
+    --rdp-weekday-text-align: center;
+    --rdp-gradient-direction: 90deg;
+}
+.rdp-selected .rdp-day_button {
+    border:none;
+}
+
+
+@media (max-width: 480px) {
+    .burger {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+    .header-left-logo {
+        width: 36px;
+        height: 36px;
+    }
+    .header-left-container-buttons {
+        background-color: white;
+        height: 37%;
+        width: 248px;
+        margin: 0;
+    }
+    .header-left-buttons-text {
+        font-size: 20px;
+        margin: 10px 10px;
+    }
+    .header-left-button {
+        width: 248px;
+        height: 20vw;
+    }
+    .header-left-button img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .right-user-data {
+        margin-top: 85px;
+    }
+    .right-user-data h1 {
+        font-size: 24px;
+        margin-left: 12vw;
+        margin-bottom: 40px;
+    }
+    .title-data {
+        margin: 20px 0;
+        font-size: 20px;
+        margin-left: 12vw;
+    }
+    .right-user-info {
+        width: 280px;
+        height: 238px;
+        margin-top: 20px;
+        margin-left: 12vw;
+    }
+    .right-user-info-input {
+        flex-direction: column;
+    }
+    .right-user-info span {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+    .right-user-info input {
+        width: 248px;
+        height: 38px;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    .save-info-user {
+        width: 108px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+
+    .right-user-actions {
+        flex-direction: column;
+        width: 280px;
+        height: 665px;
+        margin-left: 12vw;
+    }
+    .right-user-actions-info {
+        margin: 25px 0 0 0;
+    }
+    .right-user-actions img {
+        width: 192px;
+        height: 206px;
+    }
+    .right-user-actions-info-title {
+        font-size: 20px;
+    }
+    .right-user-actions-info-container {
+        grid-template-columns: 10px;
+    }
+    .right-user-actions-info-container span {
+        font-size: 16px;
+        margin-top: 11px;
+        margin-bottom: 16px;
+        line-height: 20px;
+        width: 177px;
+    }
+    .rdp-root {
+        --rdp-accent-color: blue;
+        --rdp-accent-background-color: #f0f0ff;
+        --rdp-day-height: 7.75vw;
+        --rdp-day-width: 6.75vw;
+        --rdp-day_button-border-radius: 100%;
+        /* --rdp-day_button-border: 2px solid transparent; */
+        --rdp-day_button-height: var(--rdp-day-height);
+        --rdp-day_button-width: var(--rdp-day-width);
+        --rdp-selected-border: 0.2vw solid var(--rdp-accent-color);
+        --rdp-disabled-opacity: 0.5;
+        --rdp-outside-opacity: 0.75;
+        --rdp-today-color: var(--rdp-accent-color);
+        --rdp-dropdown-gap: 0.5vw;
+        --rdp-months-gap: 2vw;
+        --rdp-nav_button-disabled-opacity: 0.5;
+        --rdp-nav_button-height: 2.25vw;
+        --rdp-nav_button-width: 2.25vw;
+        --rdp-nav-height: 2.75vw;
+        --rdp-range_middle-background-color: var(--rdp-accent-background-color);
+        --rdp-range_middle-foreground-color: white;
+        --rdp-range_middle-color: inherit;
+        --rdp-range_start-color: white;
+        --rdp-range_start-background: linear-gradient(var(--rdp-gradient-direction), transparent 50%, var(--rdp-range_middle-background-color) 50%);
+        --rdp-range_start-date-background-color: var(--rdp-accent-color);
+        --rdp-range_end-background: linear-gradient(var(--rdp-gradient-direction), var(--rdp-range_middle-background-color) 50%, transparent 50%);
+        --rdp-range_end-color: white;
+        --rdp-range_end-date-background-color: var(--rdp-accent-color);
+        --rdp-week_number-border-radius: 100%;
+        --rdp-week_number-border: 0.2vw solid transparent;
+        --rdp-week_number-height: var(--rdp-day-height);
+        --rdp-week_number-opacity: 0.75;
+        --rdp-week_number-width: var(--rdp-day-width);
+        --rdp-weeknumber-text-align: center;
+        --rdp-weekday-opacity: 0.75;
+        --rdp-weekday-padding: 0.5vw 0vw;
+        --rdp-weekday-text-align: center;
+        --rdp-gradient-direction: 90deg;
+    }
+    .rdp-day_button {
+        font-size: 16px;
+    }
+    .rdp-weekday {
+        font-size: 16px;
+    }
+    .rdp-caption_label {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    .rdp-month_caption {
+        height: 40px;
+    }
+    .rdp-nav {
+        height: 40px;
+    }
+    .right-user-actions-achievements span {
+        font-size: 16px;
+        margin: 28px 0 0 20px;
+    }
+    .right-user-actions-achievements {
+        width: 280px;
+        height: 1666px;
+        margin-left: 45px;
+    }
+    .right-user-actions-achievements-container {
+        margin-top: 40px;
+        width: 270px;
+        height: 492px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 123px auto;
+        grid-template-rows: 131px 126px 126px;
+    }
+    .hexagon {
+        width: 95px;
+        height: 57px;
+        font-size: 16px;
+        line-height: 15px;
+    }
+    .hexagon:before, .hexagon:after {
+        border-left: 52px solid transparent;
+        border-right: 55px solid transparent;
+    }
+    .hexagon:before {
+        top: -30px;
+        border-bottom: 30px solid #3877EE99;
+    }
+    .hexagon:after {
+        bottom: -31px;
+        border-top: 31px  solid #3877EE99;
+    }
+    .exit {
+        width: 152px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 8px;
+        margin-left: 45px;
+    }
+}
+
+@media (max-width: 363px) {
+    .right-user-data h1, .title-data, .right-user-info, .right-user-actions, .right-user-actions-achievements, .exit {
+        margin-left: 20px;
+    }
+}
+
