@@ -51,9 +51,6 @@ const Match = () => {
   };
 
   const clickExit = () => {
-    setUserRole(JSON.parse(localStorage.getItem('dataUser')).role)
-    setuserToken(JSON.parse(localStorage.getItem('dataUser')).token)
-    setIdModule(JSON.parse(localStorage.getItem('idModule')))
     axios
       .post(
         `${SERVER_URL}word-learner/api/v1/submissions`,

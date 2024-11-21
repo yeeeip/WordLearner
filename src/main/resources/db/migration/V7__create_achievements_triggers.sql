@@ -1,0 +1,16 @@
+--CREATE OR REPLACE TRIGGER check_learned_modules
+--    AFTER UPDATE OF modules_learned ON user_statistics
+--    FOR EACH STATEMENT EXECUTE FUNCTION modules_learned();
+--
+--
+--CREATE FUNCTION modules_learned() RETURNS trigger AS $modules_learned$
+--    BEGIN
+--        IF NEW. >= 1 THEN
+--            INSERT INTO user_achievements
+--        END IF;
+--        IF NEW.salary < 0 THEN
+--            RAISE EXCEPTION '% Зарплата должна быть больше нуля', NEW.name;
+--        END IF;
+--    RETURN NEW;
+--    END;
+--$modules_learned$ LANGUAGE plpgsql;

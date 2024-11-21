@@ -9,9 +9,10 @@ create table if not exists module (
 create table if not exists word_card (
     id uuid primary key,
     word_en varchar not null,
-    word_ru varchar not null,5
+    word_ru varchar not null,
     card_img varchar default 'https://open-air.ru/templates/open_air/img/placeholder.png',
     module_id uuid,
+
     foreign key (module_id) references module(id)
 );
 

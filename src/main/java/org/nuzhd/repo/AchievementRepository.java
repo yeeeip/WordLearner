@@ -3,6 +3,7 @@ package org.nuzhd.repo;
 import org.nuzhd.dto.AchievementDto;
 import org.nuzhd.model.Achievement;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;

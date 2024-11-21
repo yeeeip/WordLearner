@@ -64,6 +64,6 @@ public class Mappers {
                     s.getResult(),
                     s.getModule().getWordCount(),
                     s.getLastSubmission(),
-                    s.getUser().getUsername()
+                    s.getModule().getAuthor().getUsername()
             );
 }
