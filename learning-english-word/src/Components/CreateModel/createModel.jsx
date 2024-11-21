@@ -81,6 +81,11 @@ const CreateModel = () => {
     });
   };
 
+    const clickLogo = () => {
+        localStorage.clear();
+        navigate('/')
+    }
+
   const removeFile = (index, fileName) => {
     setWordsRender(prevWords => {
       const newWords = [...prevWords];
@@ -149,7 +154,7 @@ const CreateModel = () => {
       <header className="header-left">
         <div className="header-left-icon">
           <img src={Burger} onClick={handleStateBurger} className='burger' alt="" />
-          <img src={Logo} className='header-left-logo' alt="" />
+          <img src={Logo} onClick={clickLogo} className='header-left-logo' alt="" />
         </div>
         <div className='header-left-container-buttons' style={!stateBurger ? { display: 'inline-flex' } : { display: 'none' }}>
           <Link to={`/fullModules/:${userRole}`} className='header-left-button'>

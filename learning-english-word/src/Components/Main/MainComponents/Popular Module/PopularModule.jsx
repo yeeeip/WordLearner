@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import User from '../../img/user.png'
 import './PopularModule.css'
-const data = ['','','','']
+const data = ['Animals','Verb','Profession','Adjectives']
 const PopularModule = () => {
     return(
         <div className="PopularModule">
@@ -10,7 +10,7 @@ const PopularModule = () => {
                 {data.map((el, index) => {
                     return (
                         <div className="block" key={index}>
-                            <span className='block-title'>Название</span>
+                            <span className='block-title'>{el}</span>
                             <div className='block-popular-module-container'>
                                 <span className='block-info'>10 cлов</span>
                                 <div className="vertic"></div>

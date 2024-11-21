@@ -112,6 +112,11 @@ const PersonalAccount = () => {
         }
     }, [userToken]); 
 
+    const clickLogo = () => {
+        localStorage.clear();
+        navigate('/')
+    }
+
     const checkStudy = (achievementName) => {
         if (data && data.achievements) {
             return data.achievements.some((el) => el.name === achievementName);
@@ -125,7 +130,7 @@ const PersonalAccount = () => {
             setStateBurger(false)
         }
     }
-    
+
     const exitAccount = () => {
         navigate('/');
     }
@@ -139,7 +144,7 @@ const PersonalAccount = () => {
             <header className="header-left">
                 <div className="header-left-icon">
                     <img src={Burger} onClick={handleStateBurger} className='burger' alt="burger menu" />
-                    <img src={Logo} className='header-left-logo' alt="logo" />
+                    <img src={Logo} onClick={clickLogo} className='header-left-logo' alt="logo" />
                 </div>
                 <div className='header-left-container-buttons'  style={!stateBurger ? {display: 'inline-flex'} : {display: 'none'} }>
                     <Link to={`/fullModules/:${userRole}`} className='header-left-button'>
@@ -245,3 +250,6 @@ const PersonalAccount = () => {
 }
 
 export default PersonalAccount;
+
+
+

@@ -6,7 +6,7 @@ import createmoduleImg from './img/createmodule.png'
 import UserImg from './img/user.png'
 import FullModules from './img/FullModules.png'
 import RightContainerCreatedModeles from './CreatedModelesComponents/RightContainer/RightContainerCreatedModeles'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
 
@@ -18,7 +18,11 @@ const CreatedModeles = () => {
     const handleStateBurger = () => {
         setStateBurger(prevState => !prevState);
     }
-    
+    const navigate = useNavigate();
+    const clickLogo = () => {
+        localStorage.clear();
+        navigate('/')
+    }
     const [buttonAdmin, setButtonAdmin] = useState(false);
     useEffect(() => {
         setUserRole(JSON.parse(localStorage.getItem('dataUser')).role);
@@ -35,7 +39,7 @@ const CreatedModeles = () => {
             <header className="header-left">
                 <div className="header-left-icon">
                 <img src={Burger} onClick={handleStateBurger} className='burger' alt="" />
-                    <img src={Logo} className='header-left-logo' alt="" />
+                    <img src={Logo} onClick={clickLogo} className='header-left-logo' alt="" />
                 </div>
                 <div className='header-left-container-buttons' style={!stateBurger ? {display: 'inline-flex'} : {display: 'none'}}>
                     <Link to={`/fullModules/:${userRole}`} className='header-left-button'>

@@ -125,7 +125,7 @@
     font-weight: 700;
     margin-right: 0.2vw;
 }
-.exit-task {
+.exit-task-test {
     height: 2vw;
     width: 7vw;
     background-color: #3877EE;
@@ -139,7 +139,7 @@
     border-radius: 0.3vw;
     cursor: pointer;
 }
-.exit-task-text {
+.exit-task-text-test {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,7 +147,67 @@
 }
 
 @media (max-width: 480px) {
+    .test-info {
+        margin-top: 77px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
     .test-info-title {
         font-size: 20px;
+        margin-right: 165px;
+    }
+    .test-info-page {
+        font-size: 16px;
+        margin: 15px 243px 15px 0;
+    }
+    .task-test-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .container-task-test {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .task-test-option {
+        width: 280px;
+        height: 70px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+    .next-task {
+        width: 165px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 8px;
+        margin-right: 128px;
+    }
+    .modal-window-test-info {
+        width: 280px;
+        height: 213px;
+        display: flex;
+        justify-content: center;
+        padding-left: 21px;
+    }
+    .modal-window-test-info h1 {
+        font-size: 20px;
+    }
+    .modal-window-test-info-text {
+        font-size: 16px;
+        margin: 31px 0;
+    }
+    .exit-task-test {
+        width: 142px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+    .exit-task-text-test {
+        height: 100%;
     }
 }

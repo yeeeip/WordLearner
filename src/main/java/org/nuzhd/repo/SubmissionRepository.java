@@ -11,7 +11,7 @@ public interface SubmissionRepository extends JpaRepository<Submission, UUID> {
 
     Optional<Submission> findByModuleId(UUID id);
 
-    Optional<Submission> findByModuleIdAndUserId(UUID moduleId, UUID userId);
+    Optional<Submission> findByPkModuleIdAndPkUserId(UUID pkModuleId, UUID pkUserId);
 
     List<Submission> findAllByUser_Id(UUID id);
 

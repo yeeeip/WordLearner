@@ -84,13 +84,13 @@ const RightContainerCreatedModeles = (props) => {
   
 
   const clikTest = () => {
-    navigate(`/test`);
+    navigate(`/test/${userRole}`);
   }
   const clikMath = () => {
-    navigate(`/match`);
+    navigate(`/match/${userRole}`);
   }
   const clikCards = () => {
-    navigate(`/cards`);
+    navigate(`/cards/${userRole}`);
   }
 
   useEffect(() => {

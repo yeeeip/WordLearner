@@ -1,7 +1,6 @@
 package org.nuzhd.service.impl;
 
 import jakarta.transaction.Transactional;
-import org.nuzhd.dto.AchievementDto;
 import org.nuzhd.dto.request.SubmissionRequest;
 import org.nuzhd.exception.UnknownSubmissionTypeException;
 import org.nuzhd.model.*;
@@ -22,13 +21,11 @@ public class SubmissionServiceImpl implements SubmissionService {
     private final ModuleService moduleService;
     private final SubmissionRepository submissionRepo;
     private final AppUserService appUserService;
-    private final AchievementRepository achievementRepository;
 
-    public SubmissionServiceImpl(ModuleService moduleService, SubmissionRepository submissionRepo, AppUserService appUserService, AchievementRepository achievementRepository) {
+    public SubmissionServiceImpl(ModuleService moduleService, SubmissionRepository submissionRepo, AppUserService appUserService) {
         this.moduleService = moduleService;
         this.submissionRepo = submissionRepo;
         this.appUserService = appUserService;
-        this.achievementRepository = achievementRepository;
     }
 
     @Override
@@ -37,7 +34,7 @@ public class SubmissionServiceImpl implements SubmissionService {
         WordModule module = moduleService.findById(submissionRequest.moduleId());
         AppUser user = appUserService.getCurrentUser();
 
-        Submission submission = submissionRepo.findByModuleIdAndUserId(user.getId(), submissionRequest.moduleId())
+        Submission submission = submissionRepo.findByPkModuleIdAndPkUserId(user.getId(), submissionRequest.moduleId())
                 .orElse(new Submission(0, LocalDateTime.now(), module, appUserService.getCurrentUser()));
 
         int diff = submissionRequest.correct() - submission.getResult();
@@ -71,34 +68,8 @@ public class SubmissionServiceImpl implements SubmissionService {
             default -> throw new UnknownSubmissionTypeException("Некорректный тип теста");
         }
 
-        List<AchievementDto> dto = achievementRepository.findAllAchievedByUser(user.getId());
-
         appUserService.save(user);
         return submissionRepo.save(submission);
-    }
-
-    private void checkAchievements(AchievementCategory category,
-                                   List<AchievementDto> currentAchievements,
-                                   AppUser user) {
-//        List<AchievementDto> notAchieved = currentAchievements
-//                .stream()
-//                .filter(ac -> !ac.achieved())
-//                .toList();
-//
-//        UserStatistics stats = user.getUserStats();
-//
-//        for (AchievementDto dto : notAchieved) {
-//            switch (category) {
-//                case MODULES_LEARNED -> {
-//                    int modulesCompleted = stats.getModulesCompleted();
-//
-//                    if () {
-//
-//                    }
-//                }
-//            }
-//        }
-
     }
 
     @Override

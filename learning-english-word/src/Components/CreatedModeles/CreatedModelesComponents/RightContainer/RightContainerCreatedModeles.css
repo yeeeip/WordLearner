@@ -45,6 +45,9 @@
     padding: 1vw;
     border-radius: 0.6vw;
 }
+.block-created-module1 {
+    height: 12.2vw;
+}
 .container-created-modules a{
     text-decoration: none;
 }
@@ -110,6 +113,10 @@
     line-height: 1.5vw;
     font-style: normal;
     height: 1vw;
+}
+.block-created-module-cell1 {
+    background-color: red;
+    margin-top: 0.6vw;
 }
 
 @media (max-width: 480px) {

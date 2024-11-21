@@ -13,7 +13,7 @@ const RightContainerCreatedModeles = () => {
   const [userRole, setUserRole] = useState(JSON.parse(localStorage.getItem('dataUser')).role);
   const [userToken, setuserToken] = useState(JSON.parse(localStorage.getItem('dataUser'))?.token);
   const navigate = useNavigate();
-  const SERVER_URL = process.env.REACT_APP_BACKEND_URL
+  const SERVER_URL = process.env.REACT_APP_BACKEND_URL;
 
   // Пагинация данных
   const pagination = (data) => {
@@ -33,13 +33,12 @@ const RightContainerCreatedModeles = () => {
 
   // Загружаем данные с сервера
   useEffect(() => {
-    setuserToken(JSON.parse(localStorage.getItem('dataUser')).token)
+    setuserToken(JSON.parse(localStorage.getItem('dataUser')).token);
     axios.get(`${SERVER_URL}word-learner/api/v1/modules/created`, {
       headers: {
-        'Authorization': `Bearer ${userToken}`
-      }
+        'Authorization': `Bearer ${userToken}`,
+      },
     }).then(({ data }) => {
-      console.log(data);
       const paginatedData = pagination(data); // Пагинируем данные
       setPosts(paginatedData); // Сохраняем все данные
       setFilteredPosts(paginatedData); // Изначально отображаем все данные
@@ -63,15 +62,35 @@ const RightContainerCreatedModeles = () => {
 
   // Переход к созданию нового модуля
   const clikCreateModule = () => {
-    setUserRole(JSON.parse(localStorage.getItem('dataUser')).role)
+    setUserRole(JSON.parse(localStorage.getItem('dataUser')).role);
     navigate(`/createModel/${userRole}`);
   };
 
   // Переход к детальному просмотру модуля
   const clikGoOver = (id) => {
-    setUserRole(JSON.parse(localStorage.getItem('dataUser')).role)
+    setUserRole(JSON.parse(localStorage.getItem('dataUser')).role);
     localStorage.setItem("idModule", JSON.stringify(id));
     navigate(`/moduleOverview/${userRole}`);
+  };
+
+  // Удаление модуля
+  const deleteModule = (id) => {
+    axios.delete(`${SERVER_URL}word-learner/api/v1/modules/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${userToken}`,
+      },
+    })
+    .then(() => {
+      // Обновляем список после удаления
+      const updatedPosts = posts.flat().filter((post) => post.id !== id);
+      const paginatedData = pagination(updatedPosts);
+      setPosts(paginatedData);
+      setFilteredPosts(paginatedData);
+      setPageQty(Math.ceil(updatedPosts.length / 9)); // Обновляем количество страниц
+    })
+    .catch((error) => {
+      console.error("Ошибка при удалении модуля:", error);
+    });
   };
 
   return (
@@ -80,11 +99,11 @@ const RightContainerCreatedModeles = () => {
         {/* Поле для поиска */}
         <div className="full-modules-textField">
           <TextField
-              fullWidth
-              value={query}
-              onChange={(event) => setQuery(event.target.value)} // Обновляем запрос
-              variant="outlined"
-              placeholder="Введите название модуля"
+            fullWidth
+            value={query}
+            onChange={(event) => setQuery(event.target.value)} // Обновляем запрос
+            variant="outlined"
+            placeholder="Введите название модуля"
           />
         </div>
 
@@ -96,7 +115,7 @@ const RightContainerCreatedModeles = () => {
         <Stack spacing={2}>
           <div className="container-created-modules">
             {filteredPosts[page - 1]?.map((post) => (
-              <div key={post.objectID} href={post.url} className="block-created-module">
+              <div key={post.objectID} href={post.url} className="block-created-module block-created-module1">
                 <span className="block-created-module-title">{post.title}</span>
                 <div className="block-created-module-date">
                   <span className="block-created-module-info">{post.wordCount} cлов</span>
@@ -105,11 +124,13 @@ const RightContainerCreatedModeles = () => {
                     day: '2-digit',
                     month: '2-digit',
                     year: 'numeric',
-                  })}
-                  </span>
+                  })}</span>
                 </div>
                 <div onClick={() => clikGoOver(post.id)} className="block-created-module-cell">
                   Перейти
+                </div>
+                <div onClick={() => deleteModule(post.id)} className="block-created-module-cell block-created-module-cell1">
+                  Удалить
                 </div>
               </div>
             ))}

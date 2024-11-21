@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.UUID;
 
 @Entity
-@IdClass(CompositeKey.class)
+@IdClass(AchievementCompositeKey.class)
 @Table(name = "user_achievements")
 public class UserAchievements {
 
@@ -18,11 +18,11 @@ public class UserAchievements {
     private boolean achieved;
 }
 
-class CompositeKey {
+class AchievementCompositeKey {
     private UUID userId;
     private UUID achievementId;
 
-    public CompositeKey(UUID userId, UUID achievementId) {
+    public AchievementCompositeKey(UUID userId, UUID achievementId) {
         this.userId = userId;
         this.achievementId = achievementId;
     }

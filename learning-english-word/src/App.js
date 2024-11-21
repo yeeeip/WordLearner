@@ -27,9 +27,9 @@ function App() {
           <Route path='/fullModules/:role' element={<FullModules/>}/>
           <Route path='/passedModule/:role' element={<PassedModule/>}/>
           <Route path='/moduleOverview/:role' element={<ModuleOverview/>}/>
-          <Route path='/match' element={<Match/>}/>
-          <Route path='/test' element={<Test/>}/>
-          <Route path='/cards' element={<Cards/>}/>
+          <Route path='/match/:role' element={<Match/>}/>
+          <Route path='/test/:role' element={<Test/>}/>
+          <Route path='/cards/:role' element={<Cards/>}/>
         </Routes>
       </div>
     </Router>

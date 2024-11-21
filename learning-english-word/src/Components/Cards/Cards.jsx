@@ -92,6 +92,10 @@ const Cards = () => {
             setPage(page+1);
         }
     }
+    const clickLogo = () => {
+        localStorage.clear();
+        navigate('/')
+    }
 
 
     useEffect(() => {
@@ -114,11 +118,11 @@ const Cards = () => {
     }, [userToken]);
 
     return (
-        <div className="test">
+        <div className="cards">
             <header className="header-left">
                 <div className="header-left-icon">
                     <img src={Burger} onClick={handleStateBurger} className='burger' alt="" />
-                    <img src={Logo} className='header-left-logo' alt="" />
+                    <img src={Logo} onClick={clickLogo} className='header-left-logo' alt="" />
                 </div>
                 <div className='header-left-container-buttons' style={!stateBurger ? { display: 'inline-flex' } : { display: 'none' }}>
                     <Link to={`/fullModules/:${userRole}`} className='header-left-button'>
@@ -141,8 +145,8 @@ const Cards = () => {
             </header>
 
             <div className="cards-info">
-                <h1 className="test-info-title">Карточки «{testInfoTitle}»</h1>
-                <div className="container-test-info">
+                <h1 className="cards-info-title">Карточки «{testInfoTitle}»</h1>
+                <div className="container-cards-info">
                     {data  ? (  // Проверка на наличие данных
                         <div className='cards-task-info'>
                             <img src={`${data.cards[page-1].cardImg}`}/>
@@ -159,12 +163,12 @@ const Cards = () => {
                     </div>
                 </div>
             </div>
-            <div className='modal-window-test' style={flagModalWindow ? {display: 'flex'} : {display: 'none'}}>
-                    <div className='modal-window-test-info'>
+            <div className='modal-window-cards' style={flagModalWindow ? {display: 'flex'} : {display: 'none'}}>
+                    <div className='modal-window-cards-info'>
                         <h1>Результаты</h1>
                         <div>
-                            <span className='modal-window-test-info-text'><p>Верно: </p>  {rightAnswer} слов</span>
-                            <span className='modal-window-test-info-text'><p>Неверно: </p>   {notRightAnswer} слов</span>
+                            <span className='modal-window-cards-info-text'><p>Верно: </p>  {rightAnswer} слов</span>
+                            <span className='modal-window-cards-info-text'><p>Неверно: </p>   {notRightAnswer} слов</span>
                         </div>
                         <div className="exit-task" onClick={clickExit}><span className='exit-task-text'>Выйти</span></div>
                     </div>

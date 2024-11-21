@@ -11,7 +11,7 @@ import './Test.css';
 
 const Test = () => {
     const [userRole, setUserRole] = useState(JSON.parse(localStorage.getItem('dataUser')).role);
-    const [userToken, setuserToken] = useState(JSON.parse(localStorage.getItem('dataUser'))?.token);
+    const [userToken, setuserToken] = useState(JSON.parse(localStorage.getItem('dataUser')).token);
     const [idModule, setIdModule] = useState(JSON.parse(localStorage.getItem('idModule')));
     const [testInfoTitle, setTestInfoTitle] = useState('');
     const [testInfoPage, setTestInfoPage] = useState('');
@@ -23,7 +23,11 @@ const Test = () => {
     const [rightAnswer, setRightAnswer] = useState(0);
     const [flagModalWindow, setFlagModalWindow] = useState(false);
     const navigate = useNavigate()
-    console.log(idModule)
+
+    const clickLogo = () => {
+        localStorage.clear();
+        navigate('/')
+    }
 
     const [buttonAdmin, setButtonAdmin] = useState(false);
     useEffect(() => {
@@ -46,8 +50,6 @@ const Test = () => {
             setFlag(true);
             setColorCorrect([])
         }
-        console.log(page)
-        console.log(rightAnswer)
     }
 
     const clickExit = () => {
@@ -109,7 +111,7 @@ const Test = () => {
             <header className="header-left">
                 <div className="header-left-icon">
                     <img src={Burger} onClick={handleStateBurger} className='burger' alt="" />
-                    <img src={Logo} className='header-left-logo' alt="" />
+                    <img src={Logo} onClick={clickLogo} className='header-left-logo' alt="" />
                 </div>
                 <div className='header-left-container-buttons' style={!stateBurger ? { display: 'inline-flex' } : { display: 'none' }}>
                     <Link to={`/fullModules/:${userRole}`} className='header-left-button'>
@@ -165,7 +167,7 @@ const Test = () => {
                             <span className='modal-window-test-info-text'><p>Верно: </p>  {rightAnswer} слов</span>
                             <span className='modal-window-test-info-text'><p>Неверно: </p>   {(page) - rightAnswer} слов</span>
                         </div>
-                        <div className="exit-task" onClick={clickExit}><span className='exit-task-text'>Выйти</span></div>
+                        <div className="exit-task-test" onClick={clickExit}><span className='exit-task-text-test'>Выйти</span></div>
                     </div>
             </div>
 

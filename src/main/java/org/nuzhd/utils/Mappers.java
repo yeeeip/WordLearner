@@ -19,7 +19,7 @@ public class Mappers {
     public static final Function<WordTranslationWithCardDto, WordCard> fromWordCardDto =
             dto -> {
                 if (dto.cardImg() == null) {
-                    return new WordCard(dto.wordEn(), dto.wordRu(), "default.png");
+                    return new WordCard(dto.wordEn(), dto.wordRu(), "https://open-air.ru/templates/open_air/img/placeholder.png");
                 }
                 return new WordCard(dto.wordEn(), dto.wordRu(), dto.cardImg());
             };

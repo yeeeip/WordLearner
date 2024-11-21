@@ -7,16 +7,26 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
+@IdClass(SubmissionCompositeKey.class)
+@Table(name = "submission")
 public class Submission {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @Column(name = "pk_user_id")
+    private UUID pkUserId;
+
+    @Id
+    @Column(name = "pk_module_id")
+    private UUID pkModuleId;
+
     private int result;
+
     @UpdateTimestamp
     private LocalDateTime lastSubmission;
+
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private WordModule module;
+
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private AppUser user;
 
@@ -28,6 +38,8 @@ public class Submission {
         this.lastSubmission = lastSubmission;
         this.module = module;
         this.user = user;
+        this.pkModuleId=module.getId();
+        this.pkUserId=user.getId();
     }
 
     public void setResult(int result) {
@@ -36,10 +48,6 @@ public class Submission {
 
     public Integer getResult() {
         return result;
-    }
-
-    public UUID getId() {
-        return id;
     }
 
     public LocalDateTime getLastSubmission() {
@@ -64,5 +72,18 @@ public class Submission {
 
     public void setModule(WordModule module) {
         this.module = module;
+    }
+}
+
+class SubmissionCompositeKey {
+    private UUID pkUserId;
+    private UUID pkModuleId;
+
+    public SubmissionCompositeKey(UUID pkUserId, UUID pkModuleId) {
+        this.pkUserId = pkUserId;
+        this.pkModuleId = pkModuleId;
+    }
+
+    public SubmissionCompositeKey() {
     }
 }

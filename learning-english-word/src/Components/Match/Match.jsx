@@ -11,7 +11,7 @@ import './Match.css';
 
 const Match = () => {
   const [userRole, setUserRole] = useState(JSON.parse(localStorage.getItem('dataUser')).role);
-  const [userToken, setuserToken] = useState(JSON.parse(localStorage.getItem('dataUser'))?.token);
+  const [userToken, setuserToken] = useState(JSON.parse(localStorage.getItem('dataUser')).token);
   const [idModule, setIdModule] = useState(JSON.parse(localStorage.getItem('idModule')));
   const [matchInfoTitle, setMatchInfoTitle] = useState('');
   const [tmatchInfoPage, setMatchInfoPage] = useState('');
@@ -101,6 +101,11 @@ const Match = () => {
       });
   }, [userToken]);
 
+  const clickLogo = () => {
+      localStorage.clear();
+      navigate('/')
+  }
+
   const changeAnswer = (e, index) => {
     const value = Number(e.target.value);
     if (value >= 0) {  
@@ -140,7 +145,7 @@ const Match = () => {
       <header className="header-left">
         <div className="header-left-icon">
           <img src={Burger} onClick={handleStateBurger} className="burger" alt="" />
-          <img src={Logo} className="header-left-logo" alt="" />
+          <img src={Logo} onClick={clickLogo} className="header-left-logo" alt="" />
         </div>
         <div
           className="header-left-container-buttons"
@@ -195,7 +200,7 @@ const Match = () => {
                     <span className='modal-window-match-info-text'><p>Верно: </p>  {rightAnswer} слов</span>
                     <span className='modal-window-match-info-text'><p>Неверно: </p>   {(page) - rightAnswer} слов</span>
                 </div>
-                <div className="exit-task exit-task1" onClick={clickExit}><span className='exit-task-text'>Выйти</span></div>
+                <div className="exit-task-test exit-test-task1" onClick={clickExit}><span className='exit-task-text'>Выйти</span></div>
                 {console.log(page)}
             </div>
     </div>

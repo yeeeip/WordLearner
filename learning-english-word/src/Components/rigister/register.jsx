@@ -42,15 +42,21 @@ const Register = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+    
         let hasError = false;
-
+    
+        // Валидация полей
         if (!userName) {
             setUserNameError(true);
             hasError = true;
         }
         if (!email) {
             setEmailError(true);
+            hasError = true;
+        } else if (!email.includes('@')) {
+            setResponseResult(true);  // Проверка на наличие символа "@"
+            setEmailError(true);
+            setError("Неверный email. Убедитесь, что в нем есть '@'.");
             hasError = true;
         }
         if (!password) {
@@ -61,9 +67,30 @@ const Register = () => {
             setPasswordConfError(true);
             hasError = true;
         }
-
-        if (hasError) return;
-
+    
+        // Валидация пароля (минимум 8 символов)
+        if (password && password.length < 8) {
+            setResponseResult(true);
+            setPasswordError(true);
+            setError("Пароль должен содержать не менее 8 символов.");
+            hasError = true;
+        }
+    
+        // Валидация совпадения паролей
+        if (password !== passwordConf) {
+            setResponseResult(true);
+            setPasswordConfError(true);
+            setError("Пароли не совпадают.");
+            hasError = true;
+        }
+    
+        if (hasError) return;  // Если есть ошибки, выходим из функции
+    
+        console.log(userName);
+        console.log(email);
+        console.log(password);
+        console.log(passwordConf);
+    
         try {
             const response = await axios.post(
                 `http://localhost:8080/word-learner/api/v1/auth/register`,
@@ -80,22 +107,24 @@ const Register = () => {
                     },
                 }
             );
+    
+            // Очистка полей после успешной регистрации
             setPassword('');
             setEmail('');
             setPasswordConf('');
-            setPassword('');
-            localStorage.setItem("dataUser", JSON.stringify(response.data)); 
+            localStorage.setItem("dataUser", JSON.stringify(response.data));
             setSuccessfully("Регистрация прошла успешно");
             navigate(`/login`);
         } catch (error) {
+            // Очистка полей и отображение ошибки при сбое
             setPassword('');
             setEmail('');
             setPasswordConf('');
-            setPassword('');
-            setResponseResult(true)
+            setResponseResult(true);
             console.error("Error:", error);
         }
     };
+    
 
     return (
         <div className="login">
@@ -147,7 +176,7 @@ const Register = () => {
                 />
                 {passwordConfError ? <span className='error-message'>Неверный пароль</span>: ''}
                 <Link className='btn-login' onClick={handleSubmit}>Зарегистрироваться</Link>
-                {responseResult ? <span className='error-message-responseResult'>Ошибка регистрации. Пожалуйста, проверьте свои данные.</span>: ''}
+                {responseResult ? <span className='error-message-responseResult'>{error}</span>: ''}
             </div>
             <div className='block-register'>
                 <Link to='/login' className='btn-register'>Войти в личный кабинет</Link>
