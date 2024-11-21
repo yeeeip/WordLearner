@@ -21,4 +21,4 @@
 # Используемые технологии
 
 Бекенд - Java, Spring Boot, Spring Security, PostreSQL, Flyway  
-Фронтенд - JS, React
+Фронтенд - HTML, CSS, React JS
