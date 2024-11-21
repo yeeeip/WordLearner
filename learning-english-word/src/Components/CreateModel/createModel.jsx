@@ -7,7 +7,7 @@ import UserImg from './img/user.png';
 import FullModules from './img/FullModules.png'
 import './createModel.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CreateModel = () => {
   const [wordsRender, setWordsRender] = useState([{ id: 0, wordEn: '', wordRu: '', cardImg: '' }]);
@@ -15,6 +15,8 @@ const CreateModel = () => {
   const [moduleDescription, setModuleDescription] = useState('');
   const [errors, setErrors] = useState({ title: '', description: '', words: [] });
   const [stateBurger, setStateBurger] = useState(false);
+
+  const navigate = useNavigate();
 
   const [userRole, setUserRole] = useState(JSON.parse(localStorage.getItem('dataUser')).role);
   const [userToken, setuserToken] = useState(JSON.parse(localStorage.getItem('dataUser'))?.token);
@@ -130,7 +132,11 @@ const CreateModel = () => {
       })
       .then(response => {
         console.log('Module saved successfully:', response.data);
+        
+        localStorage.setItem("idModule", JSON.stringify(response.data));
+        navigate(`/moduleOverview/${userRole}`);
         setWordsRender([])
+        
       })
       .catch(error => {
         console.error('Error saving module:', error);

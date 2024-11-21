@@ -39,4 +39,10 @@ public class ExceptionController {
         return new CustomErrorResponse(400, "Некорректный submission", ex.getMessage());
     }
 
+    @ExceptionHandler(PasswordsDoNotMatchException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public CustomErrorResponse onPasswordsDontMatch(PasswordsDoNotMatchException ex) {
+        return new CustomErrorResponse(400, "Пароли не совпадают", ex.getMessage());
+    }
+
 }

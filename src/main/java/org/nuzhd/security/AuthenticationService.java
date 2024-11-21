@@ -3,6 +3,7 @@ package org.nuzhd.security;
 import org.nuzhd.dto.request.LoginUserRequest;
 import org.nuzhd.dto.request.RegisterUserRequest;
 import org.nuzhd.dto.response.JwtAuthResponse;
+import org.nuzhd.exception.PasswordsDoNotMatchException;
 import org.nuzhd.model.AppUser;
 import org.nuzhd.model.UserRole;
 import org.nuzhd.model.UserStatistics;
@@ -32,6 +33,9 @@ public class AuthenticationService {
     }
 
     public JwtAuthResponse signUp(RegisterUserRequest request) {
+        if (!request.password().equals(request.passwordConfirmation())) {
+            throw new PasswordsDoNotMatchException("Пароли не совпадают");
+        }
 
         var user = new AppUser(
                 request.username(),
