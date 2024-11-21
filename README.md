@@ -20,5 +20,5 @@
 Для редактирования и просмотра исходного кода можно склонировать весь репозиторий себе на компьютер с помощью ```git clone https://github.com/yeeeip/WordLearner```
 # Используемые технологии
 
-Бекенд - Java, Spring Boot, Spring Security, PostreSQL, Flyway
+Бекенд - Java, Spring Boot, Spring Security, PostreSQL, Flyway  
 Фронтенд - JS, React
